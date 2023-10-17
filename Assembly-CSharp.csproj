@@ -62,12 +62,16 @@
     <Compile Include="Assets\Scripts\UI\Menu\AnimatorFunctions.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenuTransition.cs" />
     <Compile Include="Assets\Scripts\Configs.cs" />
+    <Compile Include="Assets\Scripts\AI\AIManager.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Utils.cs" />
+    <Compile Include="Assets\Scripts\AI\LocationOfInterest.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuButton.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuButtonController.cs" />
+    <Compile Include="Assets\Scripts\AI\AIAgent.cs" />
     <Compile Include="Assets\Scripts\AI\MoveCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -761,11 +765,11 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
