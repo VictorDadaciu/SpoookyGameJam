@@ -1,0 +1,31 @@
+
+
+# Ignore Rider-specific files and directories
+.idea/
+.rider/
+
+# Unity-specific files and folders to ignore
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Aa]ssets/AssetStoreTools*
+
+# Visual Studio/Visual Studio Code files
+[Vv]isual[Ss]tudio/
+[Vv]scode/
+
+# Ignore Rider-specific files and directories
+.idea/
+.rider/
+
+# OS generated files
+[Dd]esktop.ini
+[Dd]esktop.ini
+
+# Thumbnails
+[Tt]humbs.db
+[Dd]s_Store
