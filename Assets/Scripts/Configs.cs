@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Keys
+public enum Actions
 {
     MoveCamFwd,
     MoveCamBack,
@@ -12,12 +12,12 @@ public enum Keys
 
 public class Configs
 {
-    public static Dictionary<Keys, KeyCode> actions = new Dictionary<Keys, KeyCode>
+    public static Dictionary<Actions, KeyCode> actions = new Dictionary<Actions, KeyCode>
     {
-        { Keys.MoveCamFwd, KeyCode.W },
-        { Keys.MoveCamBack, KeyCode.S },
-        { Keys.MoveCamRight, KeyCode.D },
-        { Keys.MoveCamLeft, KeyCode.A },
+        { Actions.MoveCamFwd, KeyCode.W },
+        { Actions.MoveCamBack, KeyCode.S },
+        { Actions.MoveCamRight, KeyCode.D },
+        { Actions.MoveCamLeft, KeyCode.A },
     };
 }
 
