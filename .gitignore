@@ -1,0 +1,31 @@
+
+
+# Ignore Rider-specific files and directories
+Die a good life/.idea/
+Die a good life/.rider/
+
+# Unity-specific files and folders to ignore
+Die a good life/[Ll]ibrary/
+Die a good life/[Tt]emp/
+Die a good life/[Oo]bj/
+Die a good life/[Bb]uild/
+Die a good life/[Bb]uilds/
+Die a good life/[Ll]ogs/
+Die a good life/[Mm]emoryCaptures/
+Die a good life/[Aa]ssets/AssetStoreTools*
+
+# Visual Studio/Visual Studio Code files
+Die a good life/[Vv]isual[Ss]tudio/
+Die a good life/[Vv]scode/
+
+# Ignore Rider-specific files and directories
+Die a good life/.idea/
+Die a good life/.rider/
+
+# OS generated files
+Die a good life/[Dd]esktop.ini
+Die a good life/[Dd]esktop.ini
+
+# Thumbnails
+Die a good life/[Tt]humbs.db
+Die a good life/[Dd]s_Store
