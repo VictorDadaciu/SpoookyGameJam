@@ -1,5 +1,3 @@
-
-
 # Ignore Rider-specific files and directories
 .idea/
 .rider/
@@ -13,10 +11,13 @@
 [Ll]ogs/
 [Mm]emoryCaptures/
 [Aa]ssets/AssetStoreTools*
+[Uu]serSettings/
+[Uu]serSettings/*
 
 # Visual Studio/Visual Studio Code files
 [Vv]isual[Ss]tudio/
 [Vv]scode/
+.vs/
 
 # Ignore Rider-specific files and directories
 .idea/

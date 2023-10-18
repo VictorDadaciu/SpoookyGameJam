@@ -48,10 +48,18 @@
      <Compile Include="Assets/Scripts/UI/Menu/AnimatorFunctions.cs" />
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelButtonController.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MainMenuTransition.cs" />
+     <Compile Include="Assets/Scripts/Configs.cs" />
+     <Compile Include="Assets/Scripts/AI/AIManager.cs" />
+     <Compile Include="Assets/Scripts/CameraMove.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/PauseMenu.cs" />
+     <Compile Include="Assets/Scripts/Utils.cs" />
+     <Compile Include="Assets/Scripts/AI/LocationOfInterest.cs" />
+     <Compile Include="Assets/Scripts/PlayerController.cs" />
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelController.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MenuButton.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MenuButtonController.cs" />
+     <Compile Include="Assets/Scripts/AI/AIAgent.cs" />
+     <Compile Include="Assets/Scripts/AI/MoveCharacter.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -64,6 +72,7 @@
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Resources" />
+     <Folder Include="Assets/Scenes/Victor" />
      <Folder Include="Assets/Animation/Menu/MainMenu" />
      <Folder Include="Assets/Scenes" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
@@ -90,6 +99,7 @@
      <Folder Include="Assets/Resources" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Resources/Sound" />
+     <Folder Include="Assets/Scripts/AI" />
      <Folder Include="Assets/Scripts/UI/Menu" />
      <Folder Include="Assets/Scenes/Lavinia/MainMenu" />
      <Folder Include="Assets/Resources/Images" />
@@ -99,6 +109,7 @@
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Documentation" />
+     <Folder Include="Assets/Scenes/Victor/AIStuff" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <Folder Include="Assets/Animation/SoundWheel" />
@@ -749,8 +760,14 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
@@ -782,11 +799,17 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
