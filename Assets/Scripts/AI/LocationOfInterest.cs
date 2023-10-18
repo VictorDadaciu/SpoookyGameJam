@@ -1,68 +1,145 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+
+public enum ActivityType
+{
+    Loiter,
+    GetDrinks,
+    Bathroom,
+    Sit,
+    Dance
+}
 
 public class LocationOfInterest : MonoBehaviour
 {
-    bool occupied;
     public Vector2 timeToSpend;
-    float occuppyingTimer;
 
-    AIAgent occupyingAgent;
+    public LocationOfInterest next;
+    public LocationOfInterest prev;
+
+    [SerializeField] public ActivityType activityType;
+    public float radius;
+
+    List<AIAgent> agents;
+    int maxAgents;
+
+    public bool renewable;
 
     // Start is called before the first frame update
     void Start()
     {
-        occupied = false;
+        maxAgents = Mathf.CeilToInt(radius * radius);
+        agents = new List<AIAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (occupied) 
+
+    }
+
+    // Get up to n agents from the previous location
+    List<AIAgent> GetNewAgents(int n)
+    {
+        List<AIAgent> newAgents = new List<AIAgent>();
+        foreach (AIAgent agent in agents)
         {
-            occuppyingTimer -= Time.deltaTime;
-            if (occuppyingTimer <= 0)
+            if (newAgents.Count == n)
+                break;
+
+            newAgents.Add(agent);
+        }
+
+        return newAgents;
+    }
+
+    public void FinishedObjective(AIAgent agent)
+    {
+        RemoveAgent(agent);
+        if (prev != null)
+        {
+            var newAgents = prev.GetNewAgents(maxAgents - agents.Count);
+            foreach (AIAgent newAgent in newAgents)
             {
-                SetOccupied(false);
+                newAgent.Leave();
+                newAgent.GoTo(this);
             }
         }
     }
 
+    public bool IsFull()
+    {
+        return agents.Count >= maxAgents;
+    }
+
+    public bool ClosestToEndOfChain()
+    {
+        if (next == null)
+            return true;
+
+        return next.IsFull();
+    }
+
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawSphere(transform.position, 0.2f);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    public bool GetOccupied()
+    public void AddAgent(AIAgent agent)
     {
-        return occupied;
+        if (IsFull())
+            return;
+
+        agents.Add(agent);
     }
 
-    public void SetOccupied(bool occupy)
+    public void RemoveAgent(AIAgent agent)
     {
-        occupied = occupy;
-        if (!occupied)
+        agents.Remove(agent);
+    }
+
+    float GetRandomDistance()
+    {
+        return Mathf.Log(Random.Range(0.05f, 0.95f) + 1 + agents.Count * 0.72f / maxAgents);
+    }
+
+    public Vector3 CalculatePosition()
+    {
+        float distanceFromCenter = radius * GetRandomDistance();
+        float angle = Random.Range(-Mathf.PI, Mathf.PI);
+
+        float x = Mathf.Cos(angle) * distanceFromCenter;
+        float z = Mathf.Sin(angle) * distanceFromCenter;
+
+        return transform.position + new Vector3(x, transform.position.y, z);
+    }
+
+    public Vector3 GetPosition()
+    {
+        bool tooClose;
+        Vector3 possiblePosition;
+        do
         {
-            SetOccupyingAgent(null);
-        }
-        else
-        {
-            StartTimer();
-        }
-    }
+            tooClose = false;
+            possiblePosition = CalculatePosition();
+            foreach(AIAgent agent in agents)
+            {
+                if (Vector3.Distance(agent.GetActualPosition(), possiblePosition) < 0.8f)
+                {
+                    tooClose = true;
+                    break;
+                }
 
-    public void SetOccupyingAgent(AIAgent agent)
-    {
-        if (agent == null)
-            occupyingAgent.ResetObjective(this);
-        occupyingAgent = agent;
-    }
-
-    public void StartTimer()
-    {
-        occuppyingTimer = Random.Range(timeToSpend.x, timeToSpend.y);
+            }
+        } while (tooClose);
+        return possiblePosition;
     }
 }
