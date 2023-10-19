@@ -47,8 +47,11 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/UI/Menu/AnimatorFunctions.cs" />
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelButtonController.cs" />
+     <Compile Include="Assets/Scripts/DialogueManager/DialogueLine.cs" />
+     <Compile Include="Assets/Scripts/DialogueManager/DialogueGiver.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MainMenuTransition.cs" />
      <Compile Include="Assets/Scripts/Configs.cs" />
+     <Compile Include="Assets/Shading/GradientMaker.cs" />
      <Compile Include="Assets/Scripts/AI/AIManager.cs" />
      <Compile Include="Assets/Scripts/CameraMove.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/PauseMenu.cs" />
@@ -58,6 +61,7 @@
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelController.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MenuButton.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MenuButtonController.cs" />
+     <Compile Include="Assets/Scripts/DialogueManager/DialogueManager.cs" />
      <Compile Include="Assets/Scripts/AI/AIAgent.cs" />
      <Compile Include="Assets/Scripts/AI/MoveCharacter.cs" />
      <Folder Include="Assets" />
@@ -73,10 +77,12 @@
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Resources" />
      <Folder Include="Assets/Scenes/Victor" />
+     <None Include="Assets/Shading/Shadow4Toon.shader" />
      <Folder Include="Assets/Animation/Menu/MainMenu" />
      <Folder Include="Assets/Scenes" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/Scripts/UI/Credits" />
+     <Folder Include="Assets/Shading" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro" />
      <Folder Include="Assets/Animation/Menu" />
      <Folder Include="Assets/Resources/Materials" />
@@ -86,9 +92,11 @@
      <Folder Include="Assets/Resources/Prefabs" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+     <Folder Include="Assets/Scripts/DialogueManager" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
      <Folder Include="Assets/Animation" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+     <None Include="Assets/Shading/Toon.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/Resources/Images/SoundWheel" />
@@ -109,6 +117,7 @@
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Documentation" />
+     <Folder Include="Assets/Scenes/Lavinia/Shader" />
      <Folder Include="Assets/Scenes/Victor/AIStuff" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Sprites/EmojiOne.json" />
