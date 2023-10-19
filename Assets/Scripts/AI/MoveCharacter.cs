@@ -7,11 +7,13 @@ using UnityEngine.AI;
 public class MoveCharacter : MonoBehaviour
 {
     NavMeshAgent agent;
+    AIAgent ai;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        ai = GetComponent<AIAgent>();
     }
 
     public void MoveTo(Vector3 position)
@@ -26,6 +28,6 @@ public class MoveCharacter : MonoBehaviour
 
     public bool IsMoving()
     {
-        return agent.velocity.magnitude > 0.01f;
+        return Vector2.Distance(transform.position, ai.GetActualObjectivePosition()) > 0.5f;
     }
 }

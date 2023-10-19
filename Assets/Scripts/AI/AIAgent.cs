@@ -9,7 +9,7 @@ public class AIAgent : MonoBehaviour
     MoveCharacter moveCharacter;
     Queue<Pair<ActivityType, float>> burnedOutActivities;
     LocationOfInterest location;
-    Vector3 actualPosition;
+    Vector3 actualObjectivePosition;
     float activityTimer;
     int timesRenewed;
     
@@ -67,14 +67,14 @@ public class AIAgent : MonoBehaviour
         return true;
     }
 
-    public Vector3 GetActualPosition()
+    public Vector3 GetActualObjectivePosition()
     {
-        return actualPosition;
+        return actualObjectivePosition;
     }
 
     public void SetObjective(Vector3 position)
     {
-        actualPosition = position;
+        actualObjectivePosition = position;
         moveCharacter.MoveTo(position);
     }
 
