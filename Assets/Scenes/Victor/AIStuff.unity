@@ -810,10 +810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1015543093}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
 --- !u!4 &943038959 stripped
@@ -1000,11 +997,6 @@ Transform:
   - {fileID: 943038959}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1015543093 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-  m_PrefabInstance: {fileID: 8270066420492163459}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049670034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,63 +1686,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40553a5899024954cac6953d668f1963, type: 3}
---- !u!1001 &8270066420492163459
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 943038959}
-    m_Modifications:
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 531632092598185221, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 876913569557608383, guid: f177ddba75e943741923d2eca80ce405, type: 3}
-      propertyPath: m_Name
-      value: Man Zombie
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f177ddba75e943741923d2eca80ce405, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
