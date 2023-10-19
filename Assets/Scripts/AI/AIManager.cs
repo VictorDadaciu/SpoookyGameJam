@@ -31,24 +31,24 @@ public class AIManager : MonoBehaviour
     {
         foreach (AIAgent agent in agents)
         {
-            if (!agent.GetBusy())
+            if (!agent.IsBusy())
             {
                 List<Pair<LocationOfInterest, float>> priorities = new List<Pair<LocationOfInterest, float>>();
                 foreach (LocationOfInterest loc in locationsOfInterest)
                 {
-                    priorities.Add(new Pair<LocationOfInterest, float>(loc, CalculateInterest(agent, loc)));
+                    if (!loc.IsFull() && loc.ClosestToEndOfChain())
+                    {
+                        priorities.Add(new Pair<LocationOfInterest, float>(loc, CalculateInterest(agent, loc)));
+                    }
                 }
 
                 SortByPriority(ref priorities);
                 foreach (Pair<LocationOfInterest, float> priority in priorities)
                 {
                     LocationOfInterest bestLoc = priority.item1;
-                    if (!bestLoc.GetOccupied() && agent.PossibleForOccupying(bestLoc))
+                    if (agent.CanGoTo(bestLoc))
                     {
-                        bestLoc.SetOccupied(true);
-                        bestLoc.SetOccupyingAgent(agent);
-                        agent.SetObjective(bestLoc.transform.position);
-                        agent.SetBusy(true);
+                        agent.GoTo(bestLoc);
                         break;
                     }
                 }
