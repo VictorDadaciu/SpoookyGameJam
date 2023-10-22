@@ -91,7 +91,7 @@ Material:
     - _Animation_Speed: 0
     - _Animation_Time: 0
     - _Emission: 1
-    - _Emission_Power: 4.22
+    - _Emission_Power: 4.61
     - _Float: 0.35
     - _Fresnel: 0
     - _Fresnel_Intensity: 50
@@ -108,7 +108,7 @@ Material:
     m_Colors:
     - _Fresnel_Color: {r: 1, g: 0, b: 0, a: 0}
     - _MainColor: {r: 0, g: 0.6262355, b: 1, a: 0}
-    - _Main_Color: {r: 0.735849, g: 0, b: 0.40137252, a: 0}
+    - _Main_Color: {r: 0.9245283, g: 0, b: 0.57842267, a: 0}
     - _Texture_Direction: {r: 1, g: 0, b: 0, a: 0}
     - _Vector4: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

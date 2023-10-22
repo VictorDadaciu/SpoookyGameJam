@@ -88,6 +88,7 @@
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Resources/Sprite Assets" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Meshes/Nature/Rocks" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures/AmbientOcclusion/AmbientOcclusion" />
+     <Folder Include="Assets/Resources/Assets/Furniture Kit/Floor Materials" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Meshes/Nature" />
      <Folder Include="Assets/Samples" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
@@ -96,6 +97,7 @@
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures/TrailEffect/Animation" />
      <Folder Include="Assets/Script" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/Nature/Trees" />
+     <Folder Include="Assets/Scenes/LevelScene" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/Lighting/Reflection Probes" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Materials/Nature" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/People" />
@@ -142,6 +144,7 @@
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/LensFlares/LensFlarePresets" />
      <Folder Include="Assets/Resources/Materials" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Meshes" />
+     <Folder Include="Assets/Resources/Assets/Meshes/Women" />
      <Folder Include="Assets/polyperfect/Low Poly Animated People" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/LensFlares/Textures" />
@@ -179,6 +182,7 @@
      <Folder Include="Assets/Resources/Assets/Furniture Kit" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Meshes/People" />
+     <Folder Include="Assets/Resources/Assets/Meshes/Men" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/Lighting" />
      <None Include="Assets/Shading/Toon.shader" />
      <Folder Include="Assets/Resources/Assets/Furniture Kit/Models/DAE format/Textures" />
@@ -188,6 +192,7 @@
      <Folder Include="Assets/Script/Shader" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Materials" />
      <Folder Include="Assets/Samples/Universal RP" />
+     <Folder Include="Assets/Resources/Prefabs/NeonStick" />
      <Folder Include="Assets/Resources/Images/SoundWheel" />
      <Folder Include="Assets/Resources/Assets/Furniture Kit/Models/DAE format" />
      <Folder Include="Assets/Scenes/Lavinia" />
@@ -202,6 +207,7 @@
      <Folder Include="Assets/Resources" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/CameraStacking/3D Skybox/Shaders" />
+     <Folder Include="Assets/Resources/Prefabs/Characters/Women" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures/OcclusionEffect" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/Halloween" />
      <Folder Include="Assets/polyperfect/Low Poly Animated People/- Materials/Simple Water" />
@@ -217,6 +223,7 @@
      <Folder Include="Assets/Scripts/UI/Menu" />
      <Folder Include="Assets/Scenes/Lavinia/MainMenu" />
      <Folder Include="Assets/Resources/Prefabs/Characters" />
+     <Folder Include="Assets/Resources/Prefabs/Characters/Men" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Textures" />
      <Folder Include="Assets/Resources/Images" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
@@ -972,14 +979,14 @@
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AI.Navigation.Updater">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
@@ -1005,6 +1012,9 @@
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
@@ -1019,9 +1029,6 @@
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
