@@ -26,7 +26,7 @@ public class PlaySound : MonoBehaviour
         audioToPlay = source;
         if (audioToPlay != null) 
         {
-            timeUntilDelete = audioToPlay.clip.length;
+            timeUntilDelete = audioToPlay.clip.length + 0.2f;
         }
         else
         {

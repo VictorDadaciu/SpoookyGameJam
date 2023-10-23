@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlaceSounds : MonoBehaviour
 {
     public GameObject soundObject;
+    public AudioSource loveSong;
 
     // Update is called once per frame
     void Update()
@@ -15,7 +16,7 @@ public class PlaceSounds : MonoBehaviour
             if (CalculatePlaceablePosition(out pos))
             {
                 PlaySound instantiatedSound = Instantiate(soundObject, pos, Quaternion.identity).GetComponent<PlaySound>();
-                instantiatedSound.SetAudioSource(null);
+                instantiatedSound.SetAudioSource(loveSong);
                 instantiatedSound.PlayAudioSource();
             }
         }
