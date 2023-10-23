@@ -27,7 +27,6 @@ public class RoomManager : MonoBehaviour
         if (currentPuzzle >= 6)
         {
             Debug.Log("All puzzles completed!");
-            // You can handle progression here, e.g., moving to the next room.
         }
         else
         {
@@ -38,7 +37,7 @@ public class RoomManager : MonoBehaviour
     void PuzzleFailed()
     {
         Debug.Log("Puzzle failed! Restarting...");
-        StartPuzzle(0); // Restart the puzzle timer
+        StartPuzzle(0);
     }
 
     IEnumerator PuzzleTimer(int time)
@@ -49,14 +48,14 @@ public class RoomManager : MonoBehaviour
         {
             if (timer <= countdownThreshold)
             {
-                string colorCode = "green"; // Default to green
+                string colorCode = "green";
 
                 if (timer <= 4 && timer >= 3)
                     colorCode = "orange";
                 else if (timer <= 2)
                     colorCode = "red";
 
-                puzzleTimerText.text = $"Time left: <color={colorCode}>{timer:F0} sec</color>"; // Change text color
+                puzzleTimerText.text = $"Time left: <color={colorCode}>{timer:F0} sec</color>";
             }
 
             timer --;
