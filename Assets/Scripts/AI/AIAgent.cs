@@ -7,22 +7,19 @@ public class AIAgent : MonoBehaviour
 {
     bool busy = false;
     MoveCharacter moveCharacter;
+    AnimationBehaviour animations;
     Queue<Pair<ActivityType, float>> burnedOutActivities;
     LocationOfInterest location;
-    Vector3 actualObjectivePosition;
     float activityTimer;
     int timesRenewed;
-    
-
-    bool lastFrameWasMoving;
 
     // Start is called before the first frame update
     void Start()
     {
         moveCharacter = GetComponent<MoveCharacter>();
+        animations = GetComponent<AnimationBehaviour>();
         burnedOutActivities = new Queue<Pair<ActivityType, float>>();
         timesRenewed = 0;
-        lastFrameWasMoving = false;
     }
 
     // Update is called once per frame
@@ -38,13 +35,16 @@ public class AIAgent : MonoBehaviour
             }
         }
 
-        if (busy && !InLine() && !moveCharacter.IsMoving())
+        if (busy && !InLine())
         {
-            if (lastFrameWasMoving)
+            if (moveCharacter.GetMoveState() == MoveState.JustStopped)
             {
                 StartTimer();
+                animations.SetDancing(location.activityType == ActivityType.Dance);
+                animations.SetTalking(location.activityType == ActivityType.Talk);
+                animations.SetArguing(location.activityType == ActivityType.Argue);
             }
-            else
+            else if (moveCharacter.GetMoveState() == MoveState.Idle)
             {
                 activityTimer -= Time.deltaTime;
                 if (activityTimer <= 0)
@@ -52,9 +52,25 @@ public class AIAgent : MonoBehaviour
                     Leave();
                 }
             }
-
         }
-        lastFrameWasMoving = moveCharacter.IsMoving();
+
+        if (busy && moveCharacter.GetMoveState() == MoveState.Idle)
+        {
+            RotateTowards(location.GetLookAt());
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position, 0.2f);
+    }
+
+    void RotateTowards(Vector3 target)
+    {
+        Vector3 direction = (target - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
     public bool CanGoTo(LocationOfInterest location)
@@ -67,15 +83,9 @@ public class AIAgent : MonoBehaviour
         return true;
     }
 
-    public Vector3 GetActualObjectivePosition()
+    public Vector3 GetObjectivePosition()
     {
-        return actualObjectivePosition;
-    }
-
-    public void SetObjective(Vector3 position)
-    {
-        actualObjectivePosition = position;
-        moveCharacter.MoveTo(position);
+        return moveCharacter.GetObjectivePosition();
     }
 
     public bool IsBusy()
@@ -100,11 +110,13 @@ public class AIAgent : MonoBehaviour
 
     public void GoTo(LocationOfInterest loc)
     {
+        animations.SetDancing(false);
+        animations.SetArguing(false);
+        animations.SetTalking(false);
         location = loc;
-        SetObjective(loc.GetPosition());
+        moveCharacter.MoveTo(loc.GetPosition());
         loc.AddAgent(this);
         busy = true;
-        lastFrameWasMoving = true;
     }
 
     bool TryAndRenew()
@@ -131,7 +143,9 @@ public class AIAgent : MonoBehaviour
         }
 
         if (!InLine())
-            burnedOutActivities.Enqueue(new Pair<ActivityType, float>(location.activityType, Random.Range(5f, 10f)));
+        {
+            burnedOutActivities.Enqueue(new Pair<ActivityType, float>(location.activityType, location.burnoutTime));
+        }
         location.FinishedObjective(this);
         location = null;
         busy = false;

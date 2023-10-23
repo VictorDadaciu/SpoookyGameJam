@@ -10,16 +10,18 @@ using UnityEngine;
 
 public enum ActivityType
 {
-    Loiter,
+    Talk,
     GetDrinks,
     Bathroom,
     Sit,
-    Dance
+    Dance,
+    Argue
 }
 
 public class LocationOfInterest : MonoBehaviour
 {
     public Vector2 timeToSpend;
+    public float burnoutTime;
 
     public LocationOfInterest next;
     public LocationOfInterest prev;
@@ -32,17 +34,15 @@ public class LocationOfInterest : MonoBehaviour
 
     public bool renewable;
 
+    Vector3 lookAt;
+
     // Start is called before the first frame update
     void Start()
     {
         maxAgents = Mathf.CeilToInt(radius * radius);
         agents = new List<AIAgent>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        lookAt = transform.GetChild(0).position;
     }
 
     // Get up to n agents from the previous location
@@ -58,6 +58,11 @@ public class LocationOfInterest : MonoBehaviour
         }
 
         return newAgents;
+    }
+
+    public Vector3 GetLookAt()
+    {
+        return lookAt;
     }
 
     public void FinishedObjective(AIAgent agent)
@@ -132,7 +137,7 @@ public class LocationOfInterest : MonoBehaviour
             possiblePosition = CalculatePosition();
             foreach(AIAgent agent in agents)
             {
-                if (Vector3.Distance(agent.GetActualObjectivePosition(), possiblePosition) < 0.8f)
+                if (Vector3.Distance(agent.GetObjectivePosition(), possiblePosition) < 0.8f)
                 {
                     tooClose = true;
                     break;
