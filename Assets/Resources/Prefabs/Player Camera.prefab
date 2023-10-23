@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3549966884222535089}
   - component: {fileID: 8956076047220818765}
+  - component: {fileID: 1905009913289048660}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: Untagged
@@ -45,9 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e0634b23c96fa4f9b6dac77382667d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 0.75
-  maxVelocity: 10
+  acceleration: 2
+  maxVelocity: 20
   dampening: 0.98
+--- !u!114 &1905009913289048660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664401024437614995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c678b1cb6a6fb44807f813e7f343b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundObject: {fileID: 6790681770466401927, guid: 42c5d8bc06e20c448aaed1f5cc94c0b9, type: 3}
 --- !u!1 &4507723022612131289
 GameObject:
   m_ObjectHideFlags: 0

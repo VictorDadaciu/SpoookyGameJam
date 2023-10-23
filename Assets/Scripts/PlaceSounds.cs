@@ -2,15 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlaceSounds : MonoBehaviour
 {
-    MoveCharacter moveCharacter;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        moveCharacter = GetComponent<MoveCharacter>();
-    }
+    public GameObject soundObject;
 
     // Update is called once per frame
     void Update()
@@ -18,15 +12,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(1)) // Right click
         {
             Vector3 pos;
-            bool canWalk = CalculateWalkablePosition(out pos);
-            if (canWalk)
+            if (CalculatePlaceablePosition(out pos))
             {
-                moveCharacter.MoveTo(pos);
+                PlaySound instantiatedSound = Instantiate(soundObject, pos, Quaternion.identity).GetComponent<PlaySound>();
+                instantiatedSound.SetAudioSource(null);
+                instantiatedSound.PlayAudioSource();
             }
         }
     }
 
-    bool CalculateWalkablePosition(out Vector3 pos)
+    bool CalculatePlaceablePosition(out Vector3 pos)
     {
         pos = Vector3.zero;
 

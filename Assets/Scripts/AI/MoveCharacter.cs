@@ -85,7 +85,9 @@ public class MoveCharacter : MonoBehaviour
 
     bool IsMoving()
     {
-        return Vector3.Distance(transform.position, objectivePos) > 2.5f;
+        Vector3 feetPos = new Vector3(transform.position.x, 0f, transform.position.z);
+        float distance = Vector3.Distance(feetPos, objectivePos);
+        return distance > 0.6f;
     }
 
     public MoveState GetMoveState()
