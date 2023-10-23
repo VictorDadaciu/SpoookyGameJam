@@ -48,15 +48,16 @@
      <Compile Include="Assets/Scripts/UI/Menu/AnimatorFunctions.cs" />
      <Compile Include="Assets/Scripts/AnimationBehaviour.cs" />
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelButtonController.cs" />
+     <Compile Include="Assets/Scripts/Puzzle/DebugButton.cs" />
      <Compile Include="Assets/polyperfect/Low Poly Animated People/- Materials/Simple Water/SimpleWater.cs" />
      <Compile Include="Assets/Scripts/DialogueManager/DialogueLine.cs" />
      <Compile Include="Assets/Scripts/DialogueManager/DialogueGiver.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MainMenuTransition.cs" />
+     <Compile Include="Assets/Scripts/Puzzle/PuzzleManager.cs" />
      <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Scripts/FirstPersonController.cs" />
      <Compile Include="Assets/Scripts/Configs.cs" />
      <Compile Include="Assets/Shading/GradientMaker.cs" />
      <Compile Include="Assets/Scripts/AI/CharacterSpawner.cs" />
-     <Compile Include="Assets/RoomManager.cs" />
      <Compile Include="Assets/Scripts/AI/AIManager.cs" />
      <Compile Include="Assets/Scripts/CameraMove.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/PauseMenu.cs" />
@@ -97,7 +98,7 @@
      <Folder Include="Assets/polyperfect/Poly Halloween/- Meshes/Halloween" />
      <Folder Include="Assets/polyperfect/Low Poly Animated People/- Materials" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures/TrailEffect/Animation" />
-     <Folder Include="Assets/Script" />
+     <Folder Include="Assets/Shading/Script" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/Nature/Trees" />
      <Folder Include="Assets/Scenes/LevelScene" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/Lighting/Reflection Probes" />
@@ -129,6 +130,7 @@
      <Folder Include="Assets/polyperfect/Poly Halloween/- Textures/VFX" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Textures/Universal" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9" />
+     <Folder Include="Assets/Scripts/Puzzle" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/terrain" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/Nature/Grass" />
      <Folder Include="Assets/Animation/Menu/MainMenu" />
@@ -193,7 +195,7 @@
      <Folder Include="Assets/Resources/Assets/Furniture Kit/Models" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Shaders" />
-     <Folder Include="Assets/Script/Shader" />
+     <Folder Include="Assets/Shading/Script/Shader" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Materials" />
      <Folder Include="Assets/Samples/Universal RP" />
      <Folder Include="Assets/Resources/Prefabs/NeonStick" />
@@ -247,6 +249,7 @@
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/Decals" />
      <Folder Include="Assets/Resources/Assets/Furniture Kit/Side" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets/Animation/Menu/Dialogue Border" />
      <Folder Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/Lighting/Reflection Probes/Animation" />
      <None Include="Assets/Resources/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Resources/Assets/TextMesh Pro/Documentation" />

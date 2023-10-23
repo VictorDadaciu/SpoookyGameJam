@@ -15,7 +15,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Image borderImage;
     [SerializeField] public DialogueLine[] m_dialogueLines;
     [SerializeField] private Sprite[] m_dialogueSprites;
-    //[SerializeField] private PlayerInteraction m_playerInteraction;
     [SerializeField] private Animator m_borderAnimator;
 
     [SerializeField]  private KeyCode startDialogueKey = KeyCode.F;
@@ -40,9 +39,6 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(startDialogueKey) && m_startDialogue)
         {
             m_borderAnimator.SetTrigger("enter");
-            // m_playerInteraction.m_controller.SetVelocity(Vector2.zero);
-            // m_playerInteraction.m_canControlCharacter = false;
-            // m_playerInteraction.m_animator.SetBool("isDialogActive", true);
             m_startDialogue = false;
             StartCoroutine(WaitForText());
         }
@@ -58,9 +54,6 @@ public class DialogueManager : MonoBehaviour
             if (m_startDialogue)
             {
                 m_borderAnimator.SetTrigger("enter");
-                // m_playerInteraction.m_controller.SetVelocity(Vector2.zero);
-                // m_playerInteraction.m_canControlCharacter = false;
-                // m_playerInteraction.m_animator.SetBool("isDialogActive", true);
                 m_startDialogue = false;
                 StartCoroutine(WaitForText());
             }
@@ -91,9 +84,6 @@ public class DialogueManager : MonoBehaviour
             isAutomatic = false;
             m_index = 0;
             m_startDialogue = true;
-
-            // m_playerInteraction.m_canControlCharacter = true;
-            // m_playerInteraction.m_animator.SetBool("isDialogActive", false);
         }
     }
 

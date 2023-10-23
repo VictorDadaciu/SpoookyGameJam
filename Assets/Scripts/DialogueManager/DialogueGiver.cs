@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 #pragma warning disable 0649, 0414
 
@@ -13,15 +10,15 @@ public class DialogueGiver : MonoBehaviour
      private bool sent = false;
     [SerializeField] private bool isAutomatic;
 
-    // private void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     if (!sent)
-    //     {
-    //         sent = true;
-    //         m_dialogueManager.m_dialogueLines = m_dialogueLines;
-    //         m_dialogueManager.isAutomatic = isAutomatic;
-    //     }
-    // }
+    public void Send()
+    {
+        if (!sent)
+        {
+            sent = true;
+            m_dialogueManager.m_dialogueLines = m_dialogueLines;
+            m_dialogueManager.isAutomatic = isAutomatic;
+        }
+    }
 
    
 }
