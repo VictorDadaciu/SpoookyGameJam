@@ -364,7 +364,11 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
+<<<<<<< HEAD
   m_BackGroundColor: {r: 0.05562419, g: 0.02006942, b: 0.103773594, a: 0}
+=======
+  m_BackGroundColor: {r: 0.03354175, g: 0.016420437, b: 0.084905684, a: 0}
+>>>>>>> 377ac26947abde8d7aeb4616250ab9639c2750bc
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -590,6 +594,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 586050877605626634, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
+<<<<<<< HEAD
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
@@ -597,6 +602,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b1b0e4a4182c8424497ec73f9fb68a9a, type: 3}
+=======
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d360a1b8403964bbcabe1dea2093a4af, type: 3}
+>>>>>>> 377ac26947abde8d7aeb4616250ab9639c2750bc
     - target: {fileID: 1085470427513155541, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.31784058
@@ -865,6 +875,7 @@ PrefabInstance:
     - {fileID: 1845944263013201367, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4450564903829531404, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
+    - {fileID: 7561753328673564192, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 200826860713892584, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
