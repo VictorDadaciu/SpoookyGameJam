@@ -9,12 +9,14 @@ public class SoundWheelController : MonoBehaviour
     [SerializeField] private Sprite NoImage;
     [SerializeField] public static int SoundId;
     [SerializeField] public Sprite[] icons;
+    public Image blur;
     
     private void Update()
     {
         if (Input.GetKeyDown((KeyCode.Q)))
         { 
             SoundWheelSelected = !SoundWheelSelected;
+            blur.enabled = SoundWheelSelected;
         }
 
         if (SoundWheelSelected)
@@ -23,7 +25,6 @@ public class SoundWheelController : MonoBehaviour
         }
         else
         {
-            
             AnimatorComponent.SetBool("OpenSoundWheel", false);
         }
 
@@ -64,5 +65,4 @@ public class SoundWheelController : MonoBehaviour
          SoundId = soundId;
          SelectedItem.sprite = icons[soundId];
     }
-
 }

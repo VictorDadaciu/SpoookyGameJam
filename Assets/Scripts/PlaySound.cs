@@ -21,6 +21,12 @@ public class PlaySound : MonoBehaviour
         }
     }
 
+    public void SetColor(Color color)
+    {
+        Material mat = GetComponent<MeshRenderer>().material;
+        mat.SetColor("_Main_Color", color);
+    }
+
     public void SetAudioSource(AudioSource source)
     {
         audioToPlay = source;
