@@ -63,14 +63,16 @@ public class AIAgent : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, 1f);
+        Gizmos.DrawSphere(transform.position, 0.4f);
     }
 
     void RotateTowards(Vector3 target)
     {
+        target.y = 0f;
         Vector3 direction = (target - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        Quaternion lookRotation = Quaternion.LookRotation(direction, Vector3.up);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        transform.localEulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
     }
 
     public bool CanGoTo(LocationOfInterest location)

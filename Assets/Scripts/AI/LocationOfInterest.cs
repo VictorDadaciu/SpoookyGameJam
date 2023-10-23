@@ -137,12 +137,11 @@ public class LocationOfInterest : MonoBehaviour
             possiblePosition = CalculatePosition();
             foreach(AIAgent agent in agents)
             {
-                if (Vector3.Distance(agent.GetObjectivePosition(), possiblePosition) < 0.8f)
+                if (Vector3.Distance(agent.GetObjectivePosition(), possiblePosition) < 2.5f)
                 {
                     tooClose = true;
                     break;
                 }
-
             }
         } while (tooClose);
         return possiblePosition;
