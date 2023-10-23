@@ -18,10 +18,10 @@ MonoBehaviour:
     m_Value: 0.39
   contrast:
     m_OverrideState: 1
-    m_Value: -6.7
+    m_Value: -18.2
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.8349056, b: 0.8349056, a: 1}
+    m_Value: {r: 0.8160377, g: 0.928457, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.8303234, y: 0.82060546, z: 1, w: -0.47012728}
+    m_Value: {x: 0.789588, y: 0.81439465, z: 1, w: -0.08177775}
   midtones:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.9396768, z: 0.96908337, w: -0.029382953}
@@ -196,10 +196,10 @@ MonoBehaviour:
     m_Value: 1.28
   intensity:
     m_OverrideState: 1
-    m_Value: 6.75
+    m_Value: 7.12
   scatter:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.707
   clamp:
     m_OverrideState: 0
     m_Value: 65472
