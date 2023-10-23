@@ -85,13 +85,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.957
+    - _Alpha: 0.709
     - _Aniamtion_Speed: 1
     - _Animation: 0
     - _Animation_Speed: 0
     - _Animation_Time: 0
     - _Emission: 1
-    - _Emission_Power: 4.61
+    - _Emission_Power: 4.36
     - _Float: 0.35
     - _Fresnel: 0
     - _Fresnel_Intensity: 50
@@ -108,7 +108,7 @@ Material:
     m_Colors:
     - _Fresnel_Color: {r: 1, g: 0, b: 0, a: 0}
     - _MainColor: {r: 0, g: 0.6262355, b: 1, a: 0}
-    - _Main_Color: {r: 0.9245283, g: 0, b: 0.57842267, a: 0}
+    - _Main_Color: {r: 6.498019, g: 0.7484887, b: 0, a: 0}
     - _Texture_Direction: {r: 1, g: 0, b: 0, a: 0}
     - _Vector4: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

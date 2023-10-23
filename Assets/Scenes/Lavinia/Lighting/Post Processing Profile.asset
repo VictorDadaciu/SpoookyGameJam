@@ -18,15 +18,37 @@ MonoBehaviour:
     m_Value: 0.39
   contrast:
     m_OverrideState: 1
-    m_Value: -18.2
+    m_Value: -2
   colorFilter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.8160377, g: 0.928457, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
   saturation:
     m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-6292671052205214129
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 0.42452833, g: 0.446218, b: 0.5660378, a: 1}
+  highlights:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  balance:
+    m_OverrideState: 0
     m_Value: 0
 --- !u!114 &-5522377708518436721
 MonoBehaviour:
@@ -89,13 +111,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.789588, y: 0.81439465, z: 1, w: -0.08177775}
+    m_Value: {x: 0.789588, y: 0.81439465, z: 1, w: -0.11916093}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9396768, z: 0.96908337, w: -0.029382953}
+    m_Value: {x: 0.9670484, y: 0.94962776, z: 1, w: -0.029382953}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.9799018, y: 1, z: 0.9225858, w: -0.12732618}
+    m_Value: {x: 0.8345027, y: 0.8670038, z: 1, w: -0.12732618}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -150,6 +172,7 @@ MonoBehaviour:
   - {fileID: 1776677602035408836}
   - {fileID: 3255474405154653582}
   - {fileID: -897597913618584669}
+  - {fileID: -6292671052205214129}
 --- !u!114 &1776677602035408836
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -162,13 +185,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   type:
     m_OverrideState: 1
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.416
+    m_Value: 0.31
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -193,13 +216,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.28
+    m_Value: 1.14
   intensity:
     m_OverrideState: 1
-    m_Value: 7.12
+    m_Value: 2.99
   scatter:
     m_OverrideState: 1
-    m_Value: 0.707
+    m_Value: 0.57
   clamp:
     m_OverrideState: 0
     m_Value: 65472
