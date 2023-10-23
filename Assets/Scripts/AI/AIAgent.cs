@@ -63,7 +63,7 @@ public class AIAgent : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, 0.2f);
+        Gizmos.DrawSphere(transform.position, 1f);
     }
 
     void RotateTowards(Vector3 target)
