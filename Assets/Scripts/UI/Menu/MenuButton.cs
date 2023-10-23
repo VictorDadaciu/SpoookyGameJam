@@ -8,9 +8,9 @@ public class MenuButton : MonoBehaviour
 {
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] Animator animator;
-    [SerializeField] AnimatorFunctions animatorFunctions;
     [SerializeField] int thisIndex;
     [SerializeField] bool isSpace = false;
+    public AudioSource audioSource;
     void Update()
     {
         if (menuButtonController.index == thisIndex)
@@ -19,12 +19,12 @@ public class MenuButton : MonoBehaviour
             if (Input.GetAxis("Submit") == 1)
             {
                 animator.SetBool("pressed", true);
+                audioSource.Play();
                 ButtonEvent(thisIndex);
             }
             else if (animator.GetBool("pressed"))
             {
                 animator.SetBool("pressed", false);
-                animatorFunctions.disableOnce = true;
             }
         }
         else

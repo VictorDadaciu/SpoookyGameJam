@@ -340,13 +340,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 7
   AnimatorComponent: {fileID: 0}
   ItemName: Item Name 7
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  controller: {fileID: 0}
+  soundNumber: 0
 --- !u!95 &50742087
 Animator:
   serializedVersion: 5
@@ -513,6 +511,12 @@ MonoBehaviour:
   SoundWheelSelected: 0
   SelectedItem: {fileID: 1249060358}
   NoImage: {fileID: 21300000, guid: 94ef523d3d671447485a20fa412262f0, type: 3}
+  icons:
+  - {fileID: 21300000, guid: 94ef523d3d671447485a20fa412262f0, type: 3}
+  - {fileID: 21300000, guid: 52c6e16defabe491e85fefca7b918e8a, type: 3}
+  - {fileID: 21300000, guid: da09a33273612442499de6e1f04ee37b, type: 3}
+  - {fileID: 21300000, guid: ebadaec6813ec4ef0934cd210959299a, type: 3}
+  - {fileID: 21300000, guid: 09a9061b764994d419ca77f1f9932111, type: 3}
 --- !u!95 &58294853
 Animator:
   serializedVersion: 5
@@ -888,13 +892,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 6
   AnimatorComponent: {fileID: 0}
   ItemName: Item Name 6
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  controller: {fileID: 0}
+  soundNumber: 0
 --- !u!95 &201178368
 Animator:
   serializedVersion: 5
@@ -1104,19 +1106,7 @@ MonoBehaviour:
   - eventID: 10
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 269985553}
-          m_TargetAssemblyTypeName: SoundWheelButtonController, Assembly-CSharp
-          m_MethodName: IsDeselected
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &269985553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,13 +1119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 2
   AnimatorComponent: {fileID: 0}
   ItemName: glass clinks
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 21300000, guid: da09a33273612442499de6e1f04ee37b, type: 3}
+  controller: {fileID: 58294852}
+  soundNumber: 2
 --- !u!95 &269985554
 Animator:
   serializedVersion: 5
@@ -1558,13 +1546,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 4
   AnimatorComponent: {fileID: 0}
   ItemName: phone ring
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 21300000, guid: 09a9061b764994d419ca77f1f9932111, type: 3}
+  controller: {fileID: 58294852}
+  soundNumber: 4
 --- !u!95 &623748741
 Animator:
   serializedVersion: 5
@@ -1900,13 +1886,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 1
   AnimatorComponent: {fileID: 0}
   ItemName: footsteps
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 21300000, guid: 52c6e16defabe491e85fefca7b918e8a, type: 3}
+  controller: {fileID: 58294852}
+  soundNumber: 1
 --- !u!114 &825501649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,19 +1955,7 @@ MonoBehaviour:
   - eventID: 10
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 825501648}
-          m_TargetAssemblyTypeName: SoundWheelButtonController, Assembly-CSharp
-          m_MethodName: IsDeselected
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1 &946270712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,13 +2023,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 5
   AnimatorComponent: {fileID: 0}
   ItemName: Item Name 5
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  controller: {fileID: 0}
+  soundNumber: 0
 --- !u!95 &946270716
 Animator:
   serializedVersion: 5
@@ -2280,13 +2250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 3
   AnimatorComponent: {fileID: 0}
   ItemName: love song
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 21300000, guid: ebadaec6813ec4ef0934cd210959299a, type: 3}
+  controller: {fileID: 58294852}
+  soundNumber: 3
 --- !u!95 &1012282593
 Animator:
   serializedVersion: 5
@@ -2698,13 +2666,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a774cfe37c76415e89c9dfd91efc477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 8
   AnimatorComponent: {fileID: 0}
   ItemName: Item Name 8
   ItemText: {fileID: 31374899}
-  SelectedItem: {fileID: 1249060358}
-  Selected: 0
-  Icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  controller: {fileID: 0}
+  soundNumber: 0
 --- !u!95 &1253790215
 Animator:
   serializedVersion: 5
