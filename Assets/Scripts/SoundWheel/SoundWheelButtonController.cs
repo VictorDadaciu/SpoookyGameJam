@@ -18,7 +18,6 @@ public class SoundWheelButtonController : MonoBehaviour
     public void IsSelected()
     {
        controller.SetSelected(soundNumber);
-        
     }
 
     public void HoverEnter()
