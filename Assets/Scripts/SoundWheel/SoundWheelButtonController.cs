@@ -4,40 +4,21 @@ using UnityEngine.UI;
 using TMPro;
 public class SoundWheelButtonController : MonoBehaviour
 {
-    [SerializeField] private int Id;
     [SerializeField] private Animator AnimatorComponent;
     [SerializeField] private string ItemName;
     [SerializeField] private TextMeshProUGUI ItemText;
-    [SerializeField] private Image SelectedItem;
-    [SerializeField] private bool Selected = false;
-    [SerializeField] private Sprite Icon;
-
+    [SerializeField] private SoundWheelController controller;
+    [SerializeField] private int soundNumber;
+    
     private void Start()
     {
         AnimatorComponent = GetComponent<Animator>();
     }
-
-    private void Update()
-    {
-        if (Selected)
-        {
-            SelectedItem.sprite = Icon;
-            ItemText.text = ItemName;
-        }
-    }
-
+    
     public void IsSelected()
     {
-        Selected = true;
-        SoundWheelController.SoundId = Id;
+       controller.SetSelected(soundNumber);
         
-    }
-
-    public void IsDeselected()
-    {
-        Selected = false;
-        
-        SoundWheelController.SoundId = 0;
     }
 
     public void HoverEnter()

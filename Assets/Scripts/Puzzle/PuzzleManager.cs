@@ -8,6 +8,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField]
     private int currentPuzzle = 1;
     private int puzzleTimer = 30;
+    [SerializeField]
     float countdownThreshold = 5f;
 
     [Header("TODO UI Data")]
@@ -101,14 +102,14 @@ public class PuzzleManager : MonoBehaviour
         {
             if (timer <= countdownThreshold)
             {
-                string colorCode = "green";
+                string colorCode = "white";
 
-                if (timer <= 4 && timer >= 3)
+                if (timer <= 15 && timer >= 6)
                     colorCode = "orange";
-                else if (timer <= 2)
+                else if (timer <= 5)
                     colorCode = "red";
 
-                puzzleTimerText.text = $"Time left: <color={colorCode}>{timer:F0} sec</color>";
+                puzzleTimerText.text = $"<color={colorCode}><b>{timer:F0}</b></color>";
             }
 
             timer --;
