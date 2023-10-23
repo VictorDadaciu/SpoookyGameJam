@@ -8,7 +8,8 @@ public class SoundWheelController : MonoBehaviour
     [SerializeField] private Image SelectedItem;
     [SerializeField] private Sprite NoImage;
     [SerializeField] public static int SoundId;
-
+    [SerializeField] public Sprite[] icons;
+    
     private void Update()
     {
         if (Input.GetKeyDown((KeyCode.Q)))
@@ -57,4 +58,11 @@ public class SoundWheelController : MonoBehaviour
             
         }
     }
+    
+    public void SetSelected(int soundId)
+    {
+         SoundId = soundId;
+         SelectedItem.sprite = icons[soundId];
+    }
+
 }
