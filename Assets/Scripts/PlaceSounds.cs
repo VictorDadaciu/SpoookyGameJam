@@ -33,7 +33,19 @@ public class PlaceSounds : MonoBehaviour
 
     bool ShouldTriggerNextPuzzle(RaycastHit hit)
     {
-        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("LivingRoom") && SoundWheelController.SoundId == 2)
+        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("LivingRoom") && SoundWheelController.SoundId == 3)
+        {
+            return true;
+        }
+        else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Hall 1") && SoundWheelController.SoundId == 2)
+        {
+            return true;
+        }
+        else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Hall 2") && SoundWheelController.SoundId == 1)
+        {
+            return true;
+        }
+        else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Kitchen") && SoundWheelController.SoundId == 4)
         {
             return true;
         }
@@ -42,7 +54,11 @@ public class PlaceSounds : MonoBehaviour
 
     int LayersToInt()
     {
-        return 1 << LayerMask.NameToLayer("Walkable") | 1 << LayerMask.NameToLayer("LivingRoom");
+        return 1 << LayerMask.NameToLayer("Walkable") |
+            1 << LayerMask.NameToLayer("LivingRoom") |
+            1 << LayerMask.NameToLayer("Hall 1") |
+            1 << LayerMask.NameToLayer("Hall 2") |
+            1 << LayerMask.NameToLayer("Kitchen");
     }
 
     bool CalculatePlaceablePosition(out RaycastHit hitOut)

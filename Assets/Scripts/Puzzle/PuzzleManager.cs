@@ -30,7 +30,9 @@ public class PuzzleManager : MonoBehaviour
     private DialogueGiver[] dialogueGivers;
 
     public AIAgent target;
-    public LocationOfInterest locationNextToLivingRoomDoor;
+    [SerializeField] public LocationOfInterest[] locations;
+    [SerializeField] public AIAgent[] arguers;
+    public AIAgent drunkClown;
 
     void Start()
     
@@ -54,7 +56,24 @@ public class PuzzleManager : MonoBehaviour
     {
         puzzleTimerText.text = "";
         StartCoroutine(PuzzleTimer(puzzleTimer));
-        target.GoTo(locationNextToLivingRoomDoor);
+        SendTargetTo(puzzleNumber);
+
+        if (puzzleNumber == 3)
+        {
+            foreach (AIAgent agent in arguers)
+            {
+                agent.GoTo(locations[5]);
+            }
+        } 
+        else if (puzzleNumber == 2)
+        {
+            drunkClown.GoTo(locations[6]);
+        }
+    }
+
+    void SendTargetTo(int puzzleNumber) 
+    {
+        target.GoTo(locations[puzzleNumber]);
     }
 
     public void PuzzleCompleted()

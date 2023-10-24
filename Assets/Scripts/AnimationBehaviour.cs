@@ -47,4 +47,14 @@ public class AnimationBehaviour : MonoBehaviour
     {
         animator.SetBool("Arguing", arguing);
     }
+
+    public void SetDrunk(bool drunk)
+    {
+        animator.SetBool("Drunk", drunk);
+    }
+
+    public void TriggerPickUp()
+    {
+        animator.SetTrigger("PickUp");
+    }
 }

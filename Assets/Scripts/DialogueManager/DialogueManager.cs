@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
             isAutomatic = false;
             m_index = 0;
             m_startDialogue = true;
-            puzzleManager.StartPuzzle(1);
+            puzzleManager.StartPuzzle(0);
         }
     }
 
