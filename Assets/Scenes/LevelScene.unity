@@ -12012,11 +12012,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dialogueManager: {fileID: 659209377}
   m_dialogueLines:
-  - spriteIndex: 0
-    sentence: Let's get started on your first day. Continue talking to me by pressing
-      SPACE.
-  - spriteIndex: 0
+  - spriteIndex: 1
+    sentence: Press SPACE to continue talking to me.
+  - spriteIndex: 1
     sentence: Hello, recruit.
+  - spriteIndex: 1
+    sentence: This is Martha McDeath, your boss and mentor. Congratulations on joining
+      Transcendence, the ultimate destination for your final destination.
+  - spriteIndex: 1
+    sentence: 'You are about to perform your first afterlife transportation operation.
+      This is a very important and delicate task, so listen carefully and follow
+      my instructions. '
+  - spriteIndex: 1
+    sentence: Take a look at this party scene! Move around the house with W,A,S,D.
+  - spriteIndex: 1
+    sentence: Our suspect, the pirate, is in the living room, chilling by the cauldron.
+  - spriteIndex: 1
+    sentence: Time is money, recruit. And we don't like to waste money.
+  - spriteIndex: 0
+    sentence: ' don''t really want to do this, really.'
+  - spriteIndex: 0
+    sentence: Maybe I can try to put my silly cassette player to good use.
+  - spriteIndex: 2
+    sentence: 'Press Q to view some of your recorded sounds. Select a sound and RIGHT
+      CLICK in a room, at the right time, to disrupt the guests. '
+  - spriteIndex: 2
+    sentence: Let's try and do it in a timely manner.  You have 30 seconds for each
+      room.
   isAutomatic: 1
 --- !u!4 &1416325454
 Transform:
