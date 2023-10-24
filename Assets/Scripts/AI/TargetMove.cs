@@ -22,6 +22,7 @@ public class TargetMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Physics.CheckSphere(transform.position - new Vector3(0f, 4f, 0f), 2f, 1 << LayerMask.NameToLayer("Pula")))
         {
             animations.TriggerPickUp();

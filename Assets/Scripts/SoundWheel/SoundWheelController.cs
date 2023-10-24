@@ -32,30 +32,30 @@ public class SoundWheelController : MonoBehaviour
         {
             case 0:
                  SelectedItem.sprite = NoImage; break;
-            case 1:
-                 Debug.Log("Item 1");
-                 break;
-            case 2:
-                 Debug.Log("Item 2");
-                 break;
-            case 3:
-                 Debug.Log("Item 3");
-                 break;
-            case 4:
-                 Debug.Log("Item 4");
-                 break;
-            case 5:
-                 Debug.Log("Item 5");
-                 break;
-            case 6:
-                 Debug.Log("Item 6");
-                 break;
-            case 7:
-                 Debug.Log("Item 7");
-                 break;
-            case 8:
-                 Debug.Log("Item 8");
-                 break;
+            // case 1:
+            //      Debug.Log("Item 1");
+            //      break;
+            // case 2:
+            //      Debug.Log("Item 2");
+            //      break;
+            // case 3:
+            //      Debug.Log("Item 3");
+            //      break;
+            // case 4:
+            //      Debug.Log("Item 4");
+            //      break;
+            // case 5:
+            //      Debug.Log("Item 5");
+            //      break;
+            // case 6:
+            //      Debug.Log("Item 6");
+            //      break;
+            // case 7:
+            //      Debug.Log("Item 7");
+            //      break;
+            // case 8:
+            //      Debug.Log("Item 8");
+            //      break;
             
         }
     }

@@ -54,8 +54,8 @@ public class PuzzleManager : MonoBehaviour
 
     public void StartPuzzle(int puzzleNumber)
     {
-        puzzleTimerText.text = "";
-        StartCoroutine(PuzzleTimer(puzzleTimer));
+        //puzzleTimerText.text = "";
+        //StartCoroutine(PuzzleTimer(puzzleTimer));
         SendTargetTo(puzzleNumber);
 
         if (puzzleNumber == 3)
@@ -73,6 +73,7 @@ public class PuzzleManager : MonoBehaviour
 
     void SendTargetTo(int puzzleNumber) 
     {
+        Debug.Log("Sending target to puzzle no "+currentPuzzle);
         target.GoTo(locations[puzzleNumber]);
     }
 
@@ -88,6 +89,7 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Starting puzzle");
             StartPuzzle(currentPuzzle);
         }
 
@@ -137,6 +139,6 @@ public class PuzzleManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        PuzzleFailed();
+        //PuzzleFailed();
     }
 }
