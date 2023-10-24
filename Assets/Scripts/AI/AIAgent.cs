@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class AIAgent : MonoBehaviour
@@ -12,6 +13,7 @@ public class AIAgent : MonoBehaviour
     LocationOfInterest location;
     float activityTimer;
     int timesRenewed;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -171,6 +173,30 @@ public class AIAgent : MonoBehaviour
         animations.TriggerElectrocute();
         enabled = false;
         moveCharacter.enabled = false;
-        Debug.Log("Congratulations!");
+        // // Find all GameObjects in the scene with the specified tag
+        // GameObject[] canvases = GameObject.FindGameObjectsWithTag("Death");
+        //
+        // // Enable the Canvas component on each GameObject with the tag
+        // foreach (GameObject canvas in canvases)
+        // {
+        //     Canvas canvasComponent = canvas.GetComponent<Canvas>();
+        //     if (canvasComponent != null)
+        //     {
+        //         canvasComponent.enabled = true;
+        //     }
+        // }
+        StartCoroutine(LoadCreditsSceneAsync());
+        
+    }
+    
+    IEnumerator LoadCreditsSceneAsync()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("CreditsScene");
+
+        // Wait until the asynchronous scene loading is complete
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

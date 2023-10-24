@@ -10,7 +10,6 @@ public class MenuButton : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] int thisIndex;
     [SerializeField] bool isSpace = false;
-    public AudioSource audioSource;
     void Update()
     {
         if (menuButtonController.index == thisIndex)
@@ -19,7 +18,6 @@ public class MenuButton : MonoBehaviour
             if (Input.GetAxis("Submit") == 1)
             {
                 animator.SetBool("pressed", true);
-                audioSource.PlayOneShot(audioSource.clip);
                 ButtonEvent(thisIndex);
             }
             else if (animator.GetBool("pressed"))

@@ -4,8 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: 
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lavinia/MainMenu/Main Menu.unity
+    guid: b24f2e1e14dc34d25af3412f432f79d1
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: 95dd4448bafac4c74b5d8b7fe7c9c1b4
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 8ef94dd609ae546b99ebe54b95964c80
   m_configObjects: {}
