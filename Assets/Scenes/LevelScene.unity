@@ -1854,7 +1854,7 @@ MonoBehaviour:
   prev: {fileID: 0}
   activityType: 2
   radius: 1
-  renewable: 1
+  renewable: 0
 --- !u!1001 &191197318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1935,7 +1935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4158,7 +4158,7 @@ MonoBehaviour:
   prev: {fileID: 0}
   activityType: 2
   radius: 1
-  renewable: 1
+  renewable: 0
 --- !u!1001 &513106016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7630,7 +7630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8033,6 +8033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocation: {fileID: 1109183816}
+  inBedroom: {fileID: 1873369121}
   outsideDoor: {fileID: 1760103337}
 --- !u!114 &892735339 stripped
 MonoBehaviour:
@@ -9363,7 +9364,7 @@ MonoBehaviour:
   prev: {fileID: 0}
   activityType: 2
   radius: 1
-  renewable: 1
+  renewable: 0
 --- !u!1001 &1111656456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9908,6 +9909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocation: {fileID: 1978248211}
+  inBedroom: {fileID: 0}
   outsideDoor: {fileID: 0}
 --- !u!114 &1166480795 stripped
 MonoBehaviour:
@@ -12951,6 +12953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocation: {fileID: 1978248211}
+  inBedroom: {fileID: 0}
   outsideDoor: {fileID: 0}
 --- !u!114 &1507467724 stripped
 MonoBehaviour:
@@ -14972,7 +14975,7 @@ MonoBehaviour:
   prev: {fileID: 0}
   activityType: 2
   radius: 1
-  renewable: 1
+  renewable: 0
 --- !u!1001 &1761283325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16063,7 +16066,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1873369120}
   - component: {fileID: 1873369121}
-  - component: {fileID: 1873369122}
   m_Layer: 11
   m_Name: Location in Bedroom
   m_TagString: Untagged
@@ -16105,28 +16107,7 @@ MonoBehaviour:
   prev: {fileID: 0}
   activityType: 2
   radius: 1
-  renewable: 1
---- !u!135 &1873369122
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873369119}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  renewable: 0
 --- !u!1 &1912288044
 GameObject:
   m_ObjectHideFlags: 0
@@ -18211,7 +18192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8
+      value: 3.94
       objectReference: {fileID: 0}
     - target: {fileID: 4529239212077696730, guid: 2b47fedfd09aca74088f317509347f34, type: 3}
       propertyPath: m_LocalPosition.z

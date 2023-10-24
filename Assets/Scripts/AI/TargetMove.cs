@@ -5,36 +5,28 @@ using UnityEngine;
 public class TargetMove : MonoBehaviour
 {
     AIAgent agent;
-    AnimationBehaviour animations;
     public LocationOfInterest spawnLocation;
+    public LocationOfInterest inBedroom;
     public LocationOfInterest outsideDoor;
-    bool startTimer = false;
-    float timeUntilAfterPickUp = 2f;
+    bool target = false;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<AIAgent>();
         agent.GoTo(spawnLocation);
-        animations = GetComponent<AnimationBehaviour>();
+        target = name.StartsWith("Target");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Physics.CheckSphere(transform.position - new Vector3(0f, 4f, 0f), 2f, 1 << LayerMask.NameToLayer("Pula")))
-        {
-            animations.TriggerPickUp();
-            startTimer = true;
-        }
+        if (!target) { return; }
 
-        if (startTimer)
+        if (Vector3.Distance(transform.position, inBedroom.transform.position) < 4f)
         {
-            timeUntilAfterPickUp -= Time.deltaTime;
-            if (timeUntilAfterPickUp < 0)
-            {
-                agent.GoTo(outsideDoor);
-            }
+            agent.Leave(true, true);
+            agent.GoTo(outsideDoor);
         }
     }
 }

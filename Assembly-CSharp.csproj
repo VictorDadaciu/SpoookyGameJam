@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
+    <Compile Include="Assets\Credits.cs" />
     <Compile Include="Assets\Samples\Universal RP\14.0.9\URP Package Samples\LensFlares\Scripts\ScreenSpacePlacement.cs" />
     <Compile Include="Assets\Scripts\AI\LocationOfInterest.cs" />
     <Compile Include="Assets\Scripts\AI\Drunk Person.cs" />

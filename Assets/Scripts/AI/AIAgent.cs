@@ -136,15 +136,15 @@ public class AIAgent : MonoBehaviour
         return false;
     }
 
-    public void Leave()
+    public void Leave(bool noBurnout=false, bool force=false)
     {
-        if (!InLine() && TryAndRenew())
+        if (!InLine() && TryAndRenew() && !force)
         {
             StartTimer();
             return;
         }
 
-        if (!InLine())
+        if (!InLine() && !noBurnout)
         {
             burnedOutActivities.Enqueue(new Pair<ActivityType, float>(location.activityType, location.burnoutTime));
         }

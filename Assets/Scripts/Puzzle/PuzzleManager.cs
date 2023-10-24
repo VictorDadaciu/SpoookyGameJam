@@ -7,7 +7,7 @@ public class PuzzleManager : MonoBehaviour
     [Header("Puzzle Data")]
     [SerializeField]
     private int currentPuzzle = 1;
-    private int puzzleTimer = 30;
+    private int puzzleTimer = 10;
     [SerializeField]
     float countdownThreshold = 5f;
 
@@ -54,8 +54,6 @@ public class PuzzleManager : MonoBehaviour
 
     public void StartPuzzle(int puzzleNumber)
     {
-        puzzleTimerText.text = "";
-        StartCoroutine(PuzzleTimer(puzzleTimer));
         SendTargetTo(puzzleNumber);
 
         if (puzzleNumber == 3)
@@ -73,70 +71,7 @@ public class PuzzleManager : MonoBehaviour
 
     void SendTargetTo(int puzzleNumber) 
     {
+        target.Leave(true, true);
         target.GoTo(locations[puzzleNumber]);
-    }
-
-    public void PuzzleCompleted()
-    {
-        currentPuzzle++;
-        Debug.Log("Currently in puzzle no "+currentPuzzle);
-        if (currentPuzzle >= 6)
-        {
-            Debug.Log("All puzzles completed!");
-            //TODO show death?
-            //TODO roll credits
-        }
-        else
-        {
-            StartPuzzle(currentPuzzle);
-        }
-
-        // Update TODO list based on the currentPuzzle
-        if (currentPuzzle == 3)
-        {
-            //TODO add dialog
-            todoItem1Text.text = "<s>" + todo1 + "</s>"; 
-        }
-        else if (currentPuzzle == 5)
-        {
-            //TODO add dialog
-            todoItem2Text.text = "<s>" + todo2 + "</s>";
-        }
-        else if (currentPuzzle == 6)
-        {
-            //TODO add dialog
-            todoItem3Text.text = "<s>" + todo3 + "</s>";
-        }
-    }
-
-    void PuzzleFailed()
-    {
-        Debug.Log("Puzzle failed! Restarting...");
-        StartPuzzle(0);
-    }
-
-    IEnumerator PuzzleTimer(int time)
-    {
-        int  timer = time;
-
-        while (timer >= 0)
-        {
-            if (timer <= countdownThreshold)
-            {
-                string colorCode = "white";
-
-                if (timer <= 15 && timer >= 6)
-                    colorCode = "orange";
-                else if (timer <= 5)
-                    colorCode = "red";
-
-                puzzleTimerText.text = $"<color={colorCode}><b>{timer:F0}</b></color>";
-            }
-
-            timer --;
-            yield return new WaitForSeconds(1f);
-        }
-
-        PuzzleFailed();
     }
 }
