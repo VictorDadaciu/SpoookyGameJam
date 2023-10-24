@@ -33,6 +33,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] public LocationOfInterest[] locations;
     [SerializeField] public AIAgent[] arguers;
     public AIAgent drunkClown;
+    [SerializeField] public AIAgent[] kissers; 
 
     void Start()
     
@@ -54,19 +55,34 @@ public class PuzzleManager : MonoBehaviour
 
     public void StartPuzzle(int puzzleNumber)
     {
-        SendTargetTo(puzzleNumber);
 
         if (puzzleNumber == 3)
         {
             foreach (AIAgent agent in arguers)
             {
+                agent.Leave(true, true);
                 agent.GoTo(locations[5]);
             }
         } 
         else if (puzzleNumber == 2)
         {
+            drunkClown.Leave(true, true);
             drunkClown.GoTo(locations[6]);
         }
+        else if (puzzleNumber == 1)
+        {
+            foreach (AIAgent agent in kissers)
+            {
+                agent.Leave(true, true);
+                agent.GoTo(locations[5]);
+            }
+        }
+        else if (puzzleNumber == 4)
+        {
+            target.Kill();
+            return;
+        }
+        SendTargetTo(puzzleNumber);
     }
 
     void SendTargetTo(int puzzleNumber) 

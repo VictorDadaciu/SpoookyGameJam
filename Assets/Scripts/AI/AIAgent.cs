@@ -165,4 +165,12 @@ public class AIAgent : MonoBehaviour
 
         return false;
     }
+
+    public void Kill()
+    {
+        animations.TriggerElectrocute();
+        enabled = false;
+        moveCharacter.enabled = false;
+        Debug.Log("Congratulations!");
+    }
 }

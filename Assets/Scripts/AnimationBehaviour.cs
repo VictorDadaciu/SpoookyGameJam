@@ -53,8 +53,9 @@ public class AnimationBehaviour : MonoBehaviour
         animator.SetBool("Drunk", drunk);
     }
 
-    public void TriggerPickUp()
+    public void TriggerElectrocute()
     {
-        animator.SetTrigger("PickUp");
+        animator.SetTrigger("Electrocute");
+        animator.SetBool("Dead", true);
     }
 }
