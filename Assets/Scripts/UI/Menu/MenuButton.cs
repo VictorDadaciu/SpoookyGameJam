@@ -19,7 +19,7 @@ public class MenuButton : MonoBehaviour
             if (Input.GetAxis("Submit") == 1)
             {
                 animator.SetBool("pressed", true);
-                audioSource.Play();
+                audioSource.PlayOneShot(audioSource.clip);
                 ButtonEvent(thisIndex);
             }
             else if (animator.GetBool("pressed"))
@@ -54,7 +54,6 @@ public class MenuButton : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("LevelScene");
         
-
         while (!asyncLoad.isDone)
         {
             yield return null;

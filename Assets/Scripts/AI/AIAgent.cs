@@ -123,7 +123,7 @@ public class AIAgent : MonoBehaviour
 
     bool TryAndRenew()
     {
-        if (location.renewable)
+        if (location != null && location.renewable)
         {
             float renewChance = timesRenewed * 0.25f + 0.3f;
             float renewRoll = Random.Range(0f, 1f);
@@ -148,7 +148,11 @@ public class AIAgent : MonoBehaviour
         {
             burnedOutActivities.Enqueue(new Pair<ActivityType, float>(location.activityType, location.burnoutTime));
         }
-        location.FinishedObjective(this);
+
+        if (location != null)
+        {
+            location.FinishedObjective(this);
+        }
         location = null;
         busy = false;
         timesRenewed = 0;

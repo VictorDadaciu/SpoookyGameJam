@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a4301f2a8916b5d4f8cd11ba7ec3734f, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 7fb0d6e4d0b3fe24f9d256f4b3439921, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -137,7 +137,7 @@ AudioSource:
   m_GameObject: {fileID: 1508238921}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 95a7e09be12dceb4c863b9a004a491e5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 287733eafc1cf40b8822c58ca6b043a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -364,11 +364,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-<<<<<<< HEAD
-  m_BackGroundColor: {r: 0.05562419, g: 0.02006942, b: 0.103773594, a: 0}
-=======
   m_BackGroundColor: {r: 0.03354175, g: 0.016420437, b: 0.084905684, a: 0}
->>>>>>> 377ac26947abde8d7aeb4616250ab9639c2750bc
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -482,7 +478,7 @@ AudioSource:
   m_GameObject: {fileID: 2014019480}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 95a7e09be12dceb4c863b9a004a491e5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 287733eafc1cf40b8822c58ca6b043a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -594,7 +590,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 586050877605626634, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
-<<<<<<< HEAD
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
@@ -602,11 +597,6 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b1b0e4a4182c8424497ec73f9fb68a9a, type: 3}
-=======
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: d360a1b8403964bbcabe1dea2093a4af, type: 3}
->>>>>>> 377ac26947abde8d7aeb4616250ab9639c2750bc
     - target: {fileID: 1085470427513155541, guid: 004bbb9a722b04387940d7f942f06073, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.31784058
@@ -905,7 +895,7 @@ AudioSource:
   m_GameObject: {fileID: 2048112932}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 95a7e09be12dceb4c863b9a004a491e5, type: 2}
   m_audioClip: {fileID: 8300000, guid: 287733eafc1cf40b8822c58ca6b043a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -19,6 +19,4 @@ public class DialogueGiver : MonoBehaviour
             m_dialogueManager.isAutomatic = isAutomatic;
         }
     }
-
-   
 }

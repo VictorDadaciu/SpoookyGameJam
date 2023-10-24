@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     private int lastSpriteIndex = 0;
     private int m_index = 0;
 
+    public PuzzleManager puzzleManager;
+
     private void Update()
     {
         if (m_index <= m_dialogueLines.Length - 1)
@@ -84,6 +86,7 @@ public class DialogueManager : MonoBehaviour
             isAutomatic = false;
             m_index = 0;
             m_startDialogue = true;
+            puzzleManager.StartPuzzle(1);
         }
     }
 

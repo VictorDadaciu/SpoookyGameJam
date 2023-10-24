@@ -28,6 +28,10 @@ public class PuzzleManager : MonoBehaviour
     [Header("Dialogue Data")]
     [SerializeField]
     private DialogueGiver[] dialogueGivers;
+
+    public AIAgent target;
+    public LocationOfInterest locationNextToLivingRoomDoor;
+
     void Start()
     
     {
@@ -44,15 +48,13 @@ public class PuzzleManager : MonoBehaviour
         {
             Debug.LogWarning("No DialogueGiver scripts assigned to the array.");
         }
-        
-        //TODO start puzzle once tutorial completed
-        StartPuzzle(currentPuzzle);
     }
 
-    void StartPuzzle(int puzzleNumber)
+    public void StartPuzzle(int puzzleNumber)
     {
         puzzleTimerText.text = "";
         StartCoroutine(PuzzleTimer(puzzleTimer));
+        target.GoTo(locationNextToLivingRoomDoor);
     }
 
     public void PuzzleCompleted()
