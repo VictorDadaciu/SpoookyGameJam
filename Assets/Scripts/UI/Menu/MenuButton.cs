@@ -9,16 +9,18 @@ public class MenuButton : MonoBehaviour
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] Animator animator;
     [SerializeField] int thisIndex;
-    [SerializeField] bool isSpace = false;
-    void Update()
+    [SerializeField] bool isSpace = false;void Update()
     {
         if (menuButtonController.index == thisIndex)
         {
             animator.SetBool("selected", true);
             if (Input.GetAxis("Submit") == 1)
             {
-                animator.SetBool("pressed", true);
-                ButtonEvent(thisIndex);
+                if (!animator.GetBool("pressed"))
+                {
+                    animator.SetBool("pressed", true);
+                    ButtonEvent(thisIndex);
+                }
             }
             else if (animator.GetBool("pressed"))
             {
@@ -31,6 +33,7 @@ public class MenuButton : MonoBehaviour
         }
     }
 
+
     public void ButtonEvent(int index)
     {
         if (index == 0 && !isSpace)
@@ -40,14 +43,19 @@ public class MenuButton : MonoBehaviour
 
         if (index == 1)
         {
-            Application.Quit();
+            QuitGame();
         }
         
         
     }
-    
-    
-    
+
+
+        private void QuitGame()
+        {
+    #if UNITY_STANDALONE
+            Application.Quit(); // Quit the application only in standalone build
+    #endif
+        }
     IEnumerator LoadAsyncMainScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("LevelScene");

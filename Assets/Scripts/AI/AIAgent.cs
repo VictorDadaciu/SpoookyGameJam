@@ -173,18 +173,6 @@ public class AIAgent : MonoBehaviour
         animations.TriggerElectrocute();
         enabled = false;
         moveCharacter.enabled = false;
-        // // Find all GameObjects in the scene with the specified tag
-        // GameObject[] canvases = GameObject.FindGameObjectsWithTag("Death");
-        //
-        // // Enable the Canvas component on each GameObject with the tag
-        // foreach (GameObject canvas in canvases)
-        // {
-        //     Canvas canvasComponent = canvas.GetComponent<Canvas>();
-        //     if (canvasComponent != null)
-        //     {
-        //         canvasComponent.enabled = true;
-        //     }
-        // }
         StartCoroutine(LoadCreditsSceneAsync());
         
     }
@@ -193,7 +181,6 @@ public class AIAgent : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("CreditsScene");
 
-        // Wait until the asynchronous scene loading is complete
         while (!asyncLoad.isDone)
         {
             yield return null;

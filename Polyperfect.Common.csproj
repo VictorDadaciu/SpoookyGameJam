@@ -45,22 +45,22 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs" />
-     <Compile Include="Assets/polyperfect/Common/RandomCharacterPlacer.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/Common_WanderScript.cs" />
-     <Compile Include="Assets/polyperfect/Common/Wander Script/Editor/Common_WanderManagerEditor.cs" />
-     <Compile Include="Assets/polyperfect/Common/Common_KillSwitch.cs" />
-     <Compile Include="Assets/polyperfect/Common/Wander Script/MovementState.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/Common_SurfaceRotation.cs" />
-     <Compile Include="Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/IdleState.cs" />
      <Compile Include="Assets/polyperfect/Common/Common_AnimationControl.cs" />
      <Compile Include="Assets/polyperfect/Common/Common_PlaySound.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/Editor/Common_WanderScriptEditor.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/AIState.cs" />
      <Compile Include="Assets/polyperfect/Common/Common_RandomInt.cs" />
-     <Compile Include="Assets/polyperfect/Common/Wander Script/Editor/Common_StatsTable.cs" />
      <Compile Include="Assets/polyperfect/Common/Common_AnimSpeed.cs" />
+     <Compile Include="Assets/polyperfect/Common/Wander Script/Common_WanderManager.cs" />
+     <Compile Include="Assets/polyperfect/Common/RandomCharacterPlacer.cs" />
+     <Compile Include="Assets/polyperfect/Common/Wander Script/Editor/Common_WanderManagerEditor.cs" />
+     <Compile Include="Assets/polyperfect/Common/Common_KillSwitch.cs" />
+     <Compile Include="Assets/polyperfect/Common/Wander Script/MovementState.cs" />
+     <Compile Include="Assets/polyperfect/Common/Wander Script/Common_AudioManager.cs" />
+     <Compile Include="Assets/polyperfect/Common/Wander Script/Editor/Common_StatsTable.cs" />
      <Compile Include="Assets/polyperfect/Common/Wander Script/AIStats.cs" />
      <Folder Include="Assets/polyperfect/Common/Wander Script" />
      <Folder Include="Assets/polyperfect/Common/Materials/Colors/Emission" />

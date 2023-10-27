@@ -46,39 +46,39 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/UI/Menu/AnimatorFunctions.cs" />
-     <Compile Include="Assets/Scripts/AnimationBehaviour.cs" />
      <Compile Include="Assets/Scripts/PlaceSounds.cs" />
      <Compile Include="Assets/Scripts/AI/TargetMove.cs" />
      <Compile Include="Assets/Scripts/SoundWheel/SoundWheelButtonController.cs" />
-     <Compile Include="Assets/Scripts/Puzzle/DebugButton.cs" />
      <Compile Include="Assets/polyperfect/Low Poly Animated People/- Materials/Simple Water/SimpleWater.cs" />
      <Compile Include="Assets/Scripts/DialogueManager/DialogueLine.cs" />
      <Compile Include="Assets/Scripts/DialogueManager/DialogueGiver.cs" />
-     <Compile Include="Assets/Scripts/UI/Menu/MainMenuTransition.cs" />
-     <Compile Include="Assets/Scripts/Puzzle/PuzzleManager.cs" />
      <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Scripts/FirstPersonController.cs" />
-     <Compile Include="Assets/Scripts/Configs.cs" />
      <Compile Include="Assets/Shading/GradientMaker.cs" />
      <Compile Include="Assets/Scripts/AI/CharacterSpawner.cs" />
-     <Compile Include="Assets/Scripts/AI/AIManager.cs" />
      <Compile Include="Assets/Scripts/CameraMove.cs" />
+     <Compile Include="Assets/Scripts/PlayerController.cs" />
+     <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Scripts/AutoLoadPipelineAsset.cs" />
+     <Compile Include="Assets/Scripts/SoundWheel/SoundWheelController.cs" />
+     <Compile Include="Assets/Scripts/UI/Menu/MenuButton.cs" />
+     <Compile Include="Assets/Scripts/DialogueManager/DialogueManager.cs" />
+     <Compile Include="Assets/Scripts/PlaySound.cs" />
+     <Compile Include="Assets/Scripts/AI/AIAgent.cs" />
+     <Compile Include="Assets/Scripts/AI/MoveCharacter.cs" />
+     <Compile Include="Assets/Scripts/AnimationBehaviour.cs" />
+     <Compile Include="Assets/Scripts/Puzzle/DebugButton.cs" />
+     <Compile Include="Assets/Scripts/UI/Menu/MainMenuTransition.cs" />
+     <Compile Include="Assets/Scripts/Puzzle/PuzzleManager.cs" />
+     <Compile Include="Assets/Scripts/Configs.cs" />
+     <Compile Include="Assets/Scripts/AI/AIManager.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/PauseMenu.cs" />
      <Compile Include="Assets/Scripts/Utils.cs" />
      <Compile Include="Assets/Credits.cs" />
      <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/LensFlares/Scripts/ScreenSpacePlacement.cs" />
      <Compile Include="Assets/Scripts/AI/LocationOfInterest.cs" />
      <Compile Include="Assets/Scripts/AI/Drunk Person.cs" />
-     <Compile Include="Assets/Scripts/PlayerController.cs" />
      <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/RendererFeatures/KeepFrame/KeepFrameFeature.cs" />
-     <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/SharedAssets/Scripts/AutoLoadPipelineAsset.cs" />
-     <Compile Include="Assets/Scripts/SoundWheel/SoundWheelController.cs" />
-     <Compile Include="Assets/Scripts/UI/Menu/MenuButton.cs" />
      <Compile Include="Assets/Scripts/UI/Menu/MenuButtonController.cs" />
-     <Compile Include="Assets/Scripts/DialogueManager/DialogueManager.cs" />
      <Compile Include="Assets/Samples/Universal RP/14.0.9/URP Package Samples/CameraStacking/3D Skybox/Scripts/SkyboxCamera.cs" />
-     <Compile Include="Assets/Scripts/PlaySound.cs" />
-     <Compile Include="Assets/Scripts/AI/AIAgent.cs" />
-     <Compile Include="Assets/Scripts/AI/MoveCharacter.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/polyperfect/Poly Halloween/- Prefabs/Nature" />
      <Folder Include="Assets/polyperfect/Low Poly Animated People/- Models/Meshes/Scene" />
@@ -901,20 +901,8 @@
      <Reference Include="mscorlib">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ProGrids.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AI.Navigation">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
@@ -922,11 +910,74 @@
      <Reference Include="Unity.Burst.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder.AddOns.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProGrids.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ProBuilder">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
@@ -952,26 +1003,11 @@
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
@@ -979,23 +1015,14 @@
      <Reference Include="Unity.Timeline">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.ProBuilder.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
@@ -1006,14 +1033,11 @@
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="PPv2URPConverters">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/PPv2URPConverters.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -1021,29 +1045,20 @@
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ProGrids">
      <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <Reference Include="Unity.Addressables">
+     <HintPath>/Users/laprinia/Desktop/projects/unity/SpoookyGameJam/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

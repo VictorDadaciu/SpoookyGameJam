@@ -1,37 +1,42 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
-using UnityEngine.Rendering.Universal;
 
 public class CharacterSpawner : MonoBehaviour
 {
-    void Awake()
+    [Header("Prefabs")]
+    [SerializeField]
+    private List<GameObject> menPrefabs = new List<GameObject>();
+
+    [SerializeField]
+    private List<GameObject> womenPrefabs = new List<GameObject>();
+
+    private void Awake()
     {
+        if (menPrefabs.Count == 0 || womenPrefabs.Count == 0)
+        {
+            Debug.LogError("Please assign Men and Women prefabs in the inspector.");
+            return;
+        }
+
         bool spawnWoman = true;
-        string path = "Prefabs/Characters/";
-        List<string> men = GetFilenames(path + "Men/");
-        List<string> women = GetFilenames(path + "Women/");
 
         foreach (Transform agent in transform)
         {
-            List<string> listToUse = spawnWoman ? women : men;
+            List<GameObject> listToUse = spawnWoman ? womenPrefabs : menPrefabs;
             int index = Random.Range(0, listToUse.Count);
-            var split = listToUse[index].Split('/');
-            string nameToUse = split[split.Length - 1].Split(".")[0];
-            listToUse.RemoveAt(index);
+            GameObject prefabToUse = listToUse[index];
 
-            string fullPath = path + (spawnWoman ? "Women/" : "Men/") + nameToUse;
-            var obj = Resources.Load(fullPath);
-            Instantiate(obj, agent);
+            if (prefabToUse != null)
+            {
+                Instantiate(prefabToUse, agent);
+                listToUse.RemoveAt(index);
+            }
+            else
+            {
+                Debug.LogError("Prefab not found for " + (spawnWoman ? "Women" : "Men"));
+            }
 
             spawnWoman = !spawnWoman;
         }
-    }
-
-    List<string> GetFilenames(string path)
-    {
-        string fullPath = Application.dataPath + "/Resources/" + path;
-        return new List<string>(Directory.GetFiles(fullPath, "*.prefab"));
     }
 }

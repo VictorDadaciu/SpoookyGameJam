@@ -33,7 +33,21 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] public LocationOfInterest[] locations;
     [SerializeField] public AIAgent[] arguers;
     public AIAgent drunkClown;
-    [SerializeField] public AIAgent[] kissers; 
+    [SerializeField] public AIAgent[] kissers;
+    
+    
+    [Header("Death Sphere Parameters")]
+    public Vector3 center; // Center of the sphere
+    public float radius;   // Radius of the sphere
+
+    [Header("Death Sphere Visualization")]
+    public Color sphereColor = Color.red; // Color of the sphere's gizmo
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = sphereColor;
+        Gizmos.DrawWireSphere(center, radius);
+    }
 
     void Start()
     
@@ -55,6 +69,8 @@ public class PuzzleManager : MonoBehaviour
 
     public void StartPuzzle(int puzzleNumber)
     {
+        
+        Debug.Log(center +" vs "+ target.transform.position);
 
         if (puzzleNumber == 3)
         {
@@ -77,7 +93,7 @@ public class PuzzleManager : MonoBehaviour
                 agent.GoTo(locations[5]);
             }
         }
-        else if (puzzleNumber == 4)
+        else if (puzzleNumber == 4 && Vector3.Distance(center, target.transform.position)<=radius)
         {
             target.Kill();
             return;
